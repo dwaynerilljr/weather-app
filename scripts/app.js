@@ -6,7 +6,6 @@ const icon = document.querySelector('.icon img');
 
 const updateUI = (data) => {
     const { weather, cityDetails } = data;
-    console.log(icon);
 
     // update details section
     details.innerHTML = `
@@ -22,14 +21,7 @@ const updateUI = (data) => {
     const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
     icon.setAttribute('src', iconSrc);
 
-    let timeSrc = null;
-
-    if (weather.IsDayTime) {
-        timeSrc = '/img/day.svg';
-    } else {
-        timeSrc = '/img/night.svg'
-    }
-
+    let timeSrc = weather.IsDayTime ? '/img/day.svg' : '/img/night.svg'
     time.setAttribute('src', timeSrc);
 
     // remove d-none class if present
