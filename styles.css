@@ -5,5 +5,18 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 350px;
+}
+
+.icon {
+    position: relative;
+    border-radius: 50%;
+    top: -50px;
+    width: 100px;
+    margin-bottom: -50px;
+}
+
+.time {
+    max-height: 300px;
+    width: 100%;
 }
